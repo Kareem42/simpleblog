@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact ME!</title>    
+</head>
+
+<style>
+
+body { 
+    font-family: 'Trebuchet MS';
+    background: linear-gradient(to right, rgb(1, 11, 128), rgb(225, 230, 243)); 
+    margin: 0;
+    }
+
+*{ box-sizing: border-box; }
+
+.topnav {
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color:black;
+    text-align: center;
+    padding: 35px 35px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .topnav a:hover {
+    background-color:black;
+    color:black;
+  }
+  
+  .topnav a.active {
+    background-color: black;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: rgb(75, 89, 233);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: lightblue;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 20px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+</style>
+
+<!--Top Navigation Bar-->
+  <div class="topnav" id="myTopnav">
+    <a href="/Homepage/index.html" class="active" style="font-family: 'Trebuchet MS'; font-style: italic;">Home</a>
+    <a href="/Aboutmepage/about.html" class="active" style="font-family: 'Trebuchet MS'; font-style: italic;">About</a>
+    <a href="/Contactpage/contact.html" class="active" style="font-family: 'Trebuchet MS'; font-style: italic;">Contact</a>
+  </div>
+
+<div class="container">
+    <div style="text-align:center">
+        <h2>Contact Me</h2>
+        <p style="font-family: 'Trebuchet MS';">Let me know what you think. Maybe we can work together to change the world!</p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="space.jpg" style="width: 100%;" alt="space">
+        </div>
+        <div class="column">
+
+          <!--I've decided to use formsubmit.co as a way to receive emails from the blog until I have my own domain to host my websites on-->
+    <form action="https://formsubmit.co/kareem4209@gmail.com" method="POST">
+      <!--First Name-->
+        <label for="firstname" style="color: white; font-size: 25px;">First Name</label>
+        <input type="text" id="firstname" name="firstname" required placeholder="Your first name..." style="font-size: large;">
+
+        <!--Last Name-->
+        <label for="lastname" style="color: white; font-size: 25px;">Last Name</label>
+        <input type="text" id="lastname" name="lastname" required placeholder="Your last name..." style="font-size: large;">
+
+        <!--Subject, which is hidden from the user and will be easier to search through email for me-->
+        <input type="hidden" name="_subject" value="New Thoughts!">
+
+        <!--Email Address-->
+        <label for="email" style="color: white; font-size: 25px;">Email</label>
+        <input type="text" id="lastname" name="lastname" required placeholder="Email Address" style="font-size: large;">
+
+        <!--Comment Area-->
+        <label for="subject" style="color: white; font-size: 25px;">Subject</label>
+        <textarea id="submit" name="subject" required placeholder="Write you comment here..." style="height: 170px; font-size: x-large;"></textarea>
+
+        <!--Submit Button that will take the user to a thank you page-->
+        <input type="submit" value="Submit">
+    </form>
+
+    </div>
+    </div>
+  </div>
+<body>
+    
+</body>
+</html>
